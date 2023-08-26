@@ -51,7 +51,7 @@ button {
 }
 .main-slide .img {
   position: relative;
-  background-image: url(/imgs/main.svg);
+  background-image: url(imgs/main.svg);
   background-size: cover;
 }
 .main-slide .img img {
