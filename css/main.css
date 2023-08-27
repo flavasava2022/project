@@ -114,10 +114,11 @@ button {
 }
 .program .social-media {
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   left: 1%;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .program .social-media img {
   margin-top: 5px;
