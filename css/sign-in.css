@@ -12,16 +12,15 @@ body {
 }
 
 nav {
-  height: 140px;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
+  width: 100%;
 }
 nav img {
-  max-width: 100%;
+  width: 100%;
 }
 button {
   cursor: pointer;
+  font-family: "cairo";
 }
 
 .container {
@@ -62,7 +61,7 @@ button {
 form {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 40%));
   width: 80%;
   margin-left: auto;
   align-items: center;
@@ -135,7 +134,7 @@ footer {
   margin-top: 20px;
   padding: 20px 5%;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 25%));
   justify-content: space-around;
   border-top: 3px solid #022561;
   background-color: #2c2d31e3;
@@ -193,24 +192,31 @@ footer {
 }
 .terms {
   position: absolute;
-  top: 12%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
+  top: 5%;
+  left: 20%;
+  right: 20%;
+  height: 80vh;
   background-color: #ffffff;
-  padding: 5% 3%;
+  padding: 20px;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.terms .terms-text {
+  overflow-y: scroll;
+  direction: ltr;
+  padding: 20px;
 }
 .terms h4 {
   color: #022561;
   font-family: 700;
-  font-size: 24px;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 .terms p {
   color: #2c2d30;
   font-family: 400;
-  font-size: 20px;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 .terms .buttons {
@@ -234,4 +240,58 @@ footer {
 .terms .buttons button:first-of-type {
   color: #ffffff;
   background-color: #022561;
+}
+
+@media (max-width: 920px) {
+  .terms h4 {
+    font-size: 1.2rem;
+  }
+  .terms {
+    left: 10%;
+    right: 10%;
+  }
+}
+@media (max-width: 670px) {
+  .terms h4 {
+    font-size: 1rem;
+  }
+  .terms p {
+    font-size: 0.8rem;
+  }
+  .direction p {
+    font-size: 0.8rem;
+  }
+  .checkbox {
+    font-size: 14px;
+  }
+  .button,
+  form div:last-of-type {
+    grid-area: unset;
+  }
+
+  form {
+    width: 80%;
+    margin-left: auto;
+    align-items: center;
+    justify-content: start;
+    gap: 28px 0px;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+  }
+  form div {
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .direction p {
+    font-size: 0.6rem;
+  }
+  .form h2 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 420px) {
+  form div {
+    flex-wrap: wrap;
+  }
 }

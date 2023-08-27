@@ -10,16 +10,15 @@ body {
   width: 100%;
 }
 nav {
-  height: 140px;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
+  width: 100%;
 }
 nav img {
-  max-width: 100%;
+  width: 100%;
 }
 button {
   cursor: pointer;
+  font-family: "cairo";
 }
 
 .container {
@@ -41,6 +40,7 @@ button {
   position: absolute;
   top: 164%;
   left: 0%;
+  width: 20%;
 }
 
 .direction h4 {
@@ -64,6 +64,9 @@ button {
   color: #fd661f;
   font-size: 30px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content {
   width: 70%;
@@ -98,6 +101,12 @@ button {
   gap: 10px;
   align-items: center;
 }
+.course-participante div:nth-child(3) {
+  transform: translate(15px, 0px);
+}
+.course-participante div:nth-child(4) {
+  transform: translate(5px, 0px);
+}
 .course-participante div span:first-of-type {
   color: #022561;
   font-weight: 600;
@@ -123,7 +132,7 @@ footer {
   margin-top: 20px;
   padding: 20px 5%;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 25%));
   justify-content: space-around;
   border-top: 3px solid #022561;
   background-color: #2c2d31e3;
@@ -168,4 +177,61 @@ footer {
   padding: 5px 10%;
   background-color: #35393cff;
   color: #7d7f89;
+}
+@media (max-width: 1200px) {
+  .course-info div,
+  .course-participante div {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .course-participante,
+  .course-info {
+    flex-wrap: wrap;
+  }
+
+  .content {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .course-participante div:nth-child(3) {
+    transform: translate(0, 0px);
+  }
+  .course-participante div:nth-child(4) {
+    transform: translate(0, 0px);
+  }
+}
+@media (max-width: 800px) {
+  .price span {
+    font-size: 1.2rem;
+  }
+  .title h2 {
+    font-size: 1rem;
+  }
+  .course-info span,
+  .course-participante span {
+    font-size: 0.6rem;
+  }
+  .content {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .price span {
+    font-size: 0.6rem;
+  }
+  .direction h4,
+  .title h2 {
+    font-size: 0.5rem;
+    display: flex;
+
+    align-items: center;
+  }
+  .course-info span,
+  .course-participante span {
+    font-size: 0.4rem;
+  }
+  .content {
+    font-size: 0.6rem;
+  }
 }
