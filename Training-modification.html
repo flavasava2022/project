@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Training-modification.css" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>التسجيل</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <img src="imgs/nav.svg" alt="" />
+    </nav>
+    <main>
+      <aside>
+        <div class="choosed">
+          <img src="imgs/Union.svg" alt="" />
+          <p>الرئيسيه</p>
+        </div>
+
+        <div>
+          <img src="imgs/Vector.svg" alt="" />
+          <p>اداره المستخدمين</p>
+        </div>
+
+        <div class="sub">
+          <div>
+            <img src="imgs/sales.svg" alt="" />
+            <p>اداره التدريبات</p>
+            <img class="arrow-down" src="imgs/Vector 9.svg" alt="" />
+          </div>
+          <div class="sub-nav">
+            <p><img src="imgs/Ellipse 43.svg" alt="" />قائمه التدريبات</p>
+            <p><img src="imgs/Ellipse 43.svg" alt="" />قائمه المتدربين</p>
+          </div>
+        </div>
+
+        <div>
+          <img src="imgs/chart.svg" alt="" />
+          <p>التقارير</p>
+        </div>
+      </aside>
+      <div class="container">
+        <div class="direction">
+          <p>الرئيسيه</p>
+          <img src="imgs/arrow-left.svg" alt="" />
+          <p>اداره التدريبات</p>
+          <img src="imgs/arrow-left.svg" alt="" />
+          <p>قائمه التدريبات</p>
+          <img src="imgs/arrow-left.svg" alt="" />
+          <span>اضافه تدريب</span>
+        </div>
+
+        <div class="form">
+          <form action="none">
+            <div class="fields">
+              <div>
+                <label for="course-name">اسم الدوره</label>
+                <input
+                  id="course-name"
+                  type="text"
+                  required
+                  placeholder="صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي"
+                />
+              </div>
+
+              <div>
+                <label for="course-pic">صوره الدوره</label>
+                <input id="course-pic" type="file" required />
+              </div>
+
+              <div>
+                <label for="free-seats">عدد المقاعد المتاحه</label>
+                <input
+                  id="free-seats"
+                  type="number"
+                  required
+                  placeholder="10"
+                />
+              </div>
+
+              <div>
+                <label for="sp-free-seats">عدد المقاعد المخصصه</label>
+                <input
+                  id="sp-free-seats"
+                  type="number"
+                  required
+                  placeholder="10"
+                />
+              </div>
+
+              <div>
+                <label for="res-seats">عدد المقاعد المحجوزه</label>
+                <input id="res-seats" type="number" required placeholder="10" />
+              </div>
+
+              <div>
+                <label for="price">ثمن التدريب</label>
+                <input id="price" type="text" required placeholder="1500" />
+              </div>
+
+              <div>
+                <label for="date-start">تاريخ بدايه التدريب</label>
+                <input id="date-start" type="date" required />
+              </div>
+
+              <div>
+                <label for="date-end">تاريخ نهايه التدريب</label>
+                <input id="date-end" type="date" required />
+              </div>
+
+              <div class="des">
+                <label for="des">ملخص</label>
+                <textarea
+                  id="des"
+                  type="text"
+                  rows="8"
+                  required
+                  placeholder="لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه بروشور"
+                >
+                </textarea>
+              </div>
+
+              <div>
+                <label for="date-reg">تاريخ انتهاء فتره التسجيل</label>
+                <input id="date-reg" type="date" required />
+              </div>
+
+              <div>
+                <label for="min">الحد الادني لعدد المتدربين</label>
+                <input id="min" type="text" required placeholder="20" />
+              </div>
+            </div>
+            <input class="button" type="submit" value="حفظ" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="nav">
+        <h3>عن كونا</h3>
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span> الصفحة الرئيسية</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>عن كونا</span>
+        </div>
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>قانون حق الاطلاع</span>
+        </div>
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>مناقصات و ممارسات</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>للاعلان علي الموقع</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>اتصل بنا</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>خدماتنا</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>مكاتب كونا</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>مركز كونا لتطوير القدرات الاعلاميه</span>
+        </div>
+      </div>
+      <div class="nav">
+        <h3>خدمات كونا</h3>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>اقرأ النشرة الأخباريه</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>الصور (خلال الأسبوع)</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>الكويت في ذاكرة الأيام</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>حقوق النشر</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>خدمات ال FTP</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>كونا ريدر</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>خدمة الرسائل القصيرة (SMS)</span>
+        </div>
+      </div>
+      <div class="nav">
+        <h3>مواقع مفيدة</h3>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>وكالات الأنباء العربية</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>وكالات الأنباء العالمية</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>مؤسسات حكومية</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>مواقع أخري مفيدة</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>مواقيت الصلاة</span>
+        </div>
+      </div>
+      <div class="nav">
+        <h3>اصدارات كونا</h3>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>خدمات أخبارية أخري</span>
+        </div>
+
+        <div>
+          <img src="imgs/arrow-right.svg" alt="" />
+          <span>حدث في مثل هذا اليوم في الكويت</span>
+        </div>
+      </div>
+      <div class="up-arrow">
+        <a href="#nav"><img src="imgs/arrow-up.svg" alt="" /></a>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>كونا &copy;2023, جميع الحقوق محفوظة</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
