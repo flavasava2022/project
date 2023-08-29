@@ -24,50 +24,53 @@ button {
 }
 
 .container {
-  width: 90%;
-  margin-right: 5%;
+  width: 80%;
+  margin: 5% 10%;
   padding: 20px 0;
-}
-.direction {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.main-img {
-  width: 100%;
-}
-
-.direction h4 {
-  font-weight: 700;
-  color: #022561;
-}
-.direction p {
-  font-weight: 400;
-  color: #2c2d30;
-}
-
-.form {
-  margin-top: 20px;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+  border: 1px solid #e1e1e1;
+  border-radius: 15px;
 }
-.form h2 {
+.container h1 {
+  width: 100%;
+  text-align: center;
   color: #022561;
+  padding: 10px;
+  margin-bottom: 20px;
 }
-form {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 40%));
-  width: 80%;
-  margin-left: auto;
-  align-items: center;
+.container .sign-in-card {
+  width: 100%;
+  display: flex;
   justify-content: space-around;
-  gap: 28px 0px;
-  margin-right: auto;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.container .sign-in-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px groove;
+  border-image: linear-gradient(
+    0.5turn,
+    rgb(0 0 0 / 0%),
+    rgb(0 0 0),
+    rgb(0 0 0 / 0%)
+  );
+  border-image-slice: 1;
+
+  height: 100%;
+}
+.container .sign-in-img img {
+  width: 60%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 8%;
 }
 form div {
   display: flex;
@@ -75,7 +78,6 @@ form div {
 }
 form div:last-of-type {
   flex-wrap: nowrap;
-  grid-area: 4/1/4/-1;
 }
 form div label {
   width: 100%;
@@ -86,37 +88,35 @@ label {
   font-size: 20px;
   color: #373a36;
 }
-input:not(#terms, .button),
-select {
+.input-container {
   padding: 15px;
   width: 100%;
   border-radius: 8px;
   border: 1px solid #cccccc;
 }
+
+input {
+  flex-grow: 1;
+  max-width: 95%;
+  border: none;
+}
 input:focus {
   outline: none;
-  border: 1px solid #cccccc;
+  border: none;
 }
 ::placeholder {
   color: #cccccc;
   font-size: 14px;
 }
 
-select:focus,
-option:focus {
-  border: 1px solid #cccccc;
-  outline: none;
-}
 #terms {
   margin-left: 10px;
   width: 20px;
 }
 .button {
-  grid-area: 5/1/5/-1;
   margin-top: 20px;
   display: flex;
-  width: 268px;
-  height: 45px;
+  padding: 10px 20px;
   margin-left: auto;
   margin-right: auto;
   border: none;
@@ -181,117 +181,16 @@ footer {
   color: #7d7f89;
 }
 
-.overlay {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #373a36c9;
-  z-index: 9999;
-  display: none;
-}
-.terms {
-  position: absolute;
-  top: 5%;
-  left: 20%;
-  right: 20%;
-  height: 80vh;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-}
-.terms .terms-text {
-  overflow-y: scroll;
-  direction: ltr;
-  padding: 20px;
-}
-.terms h4 {
-  color: #022561;
-  font-family: 700;
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-.terms p {
-  color: #2c2d30;
-  font-family: 400;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.terms .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.terms .buttons button {
-  width: 137px;
-  height: 45px;
-  border-radius: 8px;
-  border: none;
-  margin-left: 50px;
-  color: #e74c3c;
-  background-color: #e74c3c1a;
-}
-.terms .buttons button:first-of-type {
-  color: #ffffff;
-  background-color: #022561;
-}
-
-@media (max-width: 920px) {
-  .terms h4 {
-    font-size: 1.2rem;
-  }
-  .terms {
-    left: 10%;
-    right: 10%;
+@media (max-width: 1000px) {
+  label {
+    font-size: 16px;
   }
 }
-@media (max-width: 670px) {
-  .terms h4 {
-    font-size: 1rem;
+@media (max-width: 750px) {
+  .container .sign-in-img {
+    display: none;
   }
-  .terms p {
-    font-size: 0.8rem;
-  }
-  .direction p {
-    font-size: 0.8rem;
-  }
-  .checkbox {
-    font-size: 14px;
-  }
-  .button,
-  form div:last-of-type {
-    grid-area: unset;
-  }
-
   form {
-    width: 80%;
-    margin-left: auto;
-    align-items: center;
-    justify-content: start;
-    gap: 28px 0px;
-    margin-right: auto;
-    grid-template-columns: 1fr;
-  }
-  form div {
-    flex-wrap: nowrap;
-  }
-}
-@media (max-width: 500px) {
-  .direction p {
-    font-size: 0.6rem;
-  }
-  .form h2 {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 420px) {
-  form div {
-    flex-wrap: wrap;
+    width: unset;
   }
 }
