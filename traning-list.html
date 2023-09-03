@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/Training-modification.css" />
+    <link rel="stylesheet" href="css/traning-list.css" />
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
 
-    <title>قائمه التدريبات</title>
+    <title>التسجيل</title>
   </head>
   <body>
     <nav id="nav">
@@ -79,92 +79,83 @@
           <p>اداره التدريبات</p>
           <img src="imgs/arrow-left.svg" alt="" />
           <p>قائمه التدريبات</p>
-          <img src="imgs/arrow-left.svg" alt="" />
-          <span>اضافه تدريب</span>
         </div>
-
-        <div class="form">
-          <form action="none">
-            <div class="fields">
-              <div>
-                <label for="course-name">اسم الدوره</label>
-                <input
-                  id="course-name"
-                  type="text"
-                  required
-                  placeholder="صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي"
-                />
-              </div>
-
-              <div>
-                <label for="course-pic">صوره الدوره</label>
-                <input id="course-pic" type="file" required />
-              </div>
-
-              <div>
-                <label for="free-seats">عدد المقاعد المتاحه</label>
-                <input
-                  id="free-seats"
-                  type="number"
-                  required
-                  placeholder="10"
-                />
-              </div>
-
-              <div>
-                <label for="sp-free-seats">عدد المقاعد المخصصه</label>
-                <input
-                  id="sp-free-seats"
-                  type="number"
-                  required
-                  placeholder="10"
-                />
-              </div>
-
-              <div>
-                <label for="res-seats">عدد المقاعد المحجوزه</label>
-                <input id="res-seats" type="number" required placeholder="10" />
-              </div>
-
-              <div>
-                <label for="price">ثمن التدريب</label>
-                <input id="price" type="text" required placeholder="1500" />
-              </div>
-
-              <div>
-                <label for="date-start">تاريخ بدايه التدريب</label>
-                <input id="date-start" type="date" required />
-              </div>
-
-              <div>
-                <label for="date-end">تاريخ نهايه التدريب</label>
-                <input id="date-end" type="date" required />
-              </div>
-
-              <div class="des">
-                <label for="des">ملخص</label>
-                <textarea
-                  id="des"
-                  type="text"
-                  rows="8"
-                  required
-                  placeholder="لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه بروشور"
-                >
-                </textarea>
-              </div>
-
-              <div>
-                <label for="date-reg">تاريخ انتهاء فتره التسجيل</label>
-                <input id="date-reg" type="date" required />
-              </div>
-
-              <div>
-                <label for="min">الحد الادني لعدد المتدربين</label>
-                <input id="min" type="text" required placeholder="20" />
-              </div>
-            </div>
-            <input class="button" type="submit" value="حفظ" />
-          </form>
+        <button class="add-btn">اضافه تدريب</button>
+        <div class="table-holder">
+          <div class="table">
+          <table>
+            <thead>
+                <tr>
+                    <th>اسم الدوره</th>
+                    <th>بدايه الدوره</th>
+                    <th>نهايه الدوره</th>
+                    <th>سعر الدوره</th>
+                    <th>الاختيارات</th>
+                  </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td>صحافة الذكاء الاصطناعي</td>
+                <td>24/8/2023</td>
+                <td>30/8/2023</td>
+                <td>150 SAR</td>
+                <td>
+                  <img src="imgs/eye.svg" alt="" />
+                  <img src="imgs/edit.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
+                <td>24/8/2023</td>
+                <td>30/8/2023</td>
+                <td>150 SAR</td>
+                <td>
+                  <img src="imgs/eye.svg" alt="" />
+                  <img src="imgs/edit.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>صحافة الذكاء الاصطناعي</td>
+                <td>24/8/2023</td>
+                <td>30/8/2023</td>
+                <td>150 SAR</td>
+                <td>
+                  <img src="imgs/eye.svg" alt="" />
+                  <img src="imgs/edit.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
+                <td>24/8/2023</td>
+                <td>30/8/2023</td>
+                <td>150 SAR</td>
+                <td>
+                  <img src="imgs/eye.svg" alt="" />
+                  <img src="imgs/edit.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>صحافة الذكاء الاصطناعي</td>
+                <td>24/8/2023</td>
+                <td>30/8/2023</td>
+                <td>150 SAR</td>
+                <td>
+                  <img src="imgs/eye.svg" alt="" />
+                  <img src="imgs/edit.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
+                <td>24/8/2023</td>
+                <td>30/8/2023</td>
+                <td>150 SAR</td>
+                <td>
+                  <img src="imgs/eye.svg" alt="" />
+                  <img src="imgs/edit.svg" alt="" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </main>

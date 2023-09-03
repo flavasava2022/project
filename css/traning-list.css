@@ -70,100 +70,109 @@ button {
   cursor: pointer;
   font-family: "cairo";
 }
-
+main {
+  display: flex;
+}
 .container {
-  width: 90%;
-  margin-right: 5%;
-  padding: 20px 0;
+  flex-grow: 1;
+  max-height: 100vh;
+  padding: 0;
+  overflow-y: auto;
+}
+aside {
+  margin-top: -1%;
+  width: 18%;
+  background-color: #022561;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+aside div {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  margin-bottom: 20px;
+  padding: 15px 20px 10px 5px;
+}
+
+aside div p {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "cairo";
+}
+aside div img {
+  padding: 0 10px;
 }
 .direction {
+  margin-top: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   gap: 10px;
+  padding: 10px 20px 10px 0;
   margin-bottom: 20px;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.main-img {
-  width: 100%;
+  background-color: #d2e6e433;
 }
 
-.direction h4 {
-  font-weight: 700;
-  color: #022561;
-}
-.direction p {
-  font-weight: 400;
+.direction span {
   color: #2c2d30;
 }
-
-.form {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-.form h2 {
+.direction p {
+  font-weight: 500;
   color: #022561;
 }
-form {
+.direction p:first-child {
+  font-weight: 700;
+}
+.table-holder {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 40%));
-  width: 80%;
+  width: 90%;
   margin-left: auto;
-  align-items: center;
-  justify-content: space-around;
-  gap: 28px 0px;
   margin-right: auto;
+  border: 1px solid #f1f0f0;
+  border-radius: 16px;
+  margin-bottom: 60px;
 }
-form div {
-  display: flex;
-  flex-wrap: wrap;
-}
-form div:last-of-type {
-  flex-wrap: nowrap;
-  grid-area: 4/1/4/-1;
-}
-form div label {
+.table {
   width: 100%;
+  min-width: 200px;
+  overflow: auto;
 }
-label {
-  margin-bottom: 5px;
-  font-weight: 400;
-  font-size: 20px;
-  color: #373a36;
-}
-input:not(#terms, .button),
-select {
-  padding: 15px;
+table {
   width: 100%;
-  border-radius: 8px;
-  border: 1px solid #cccccc;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px 0px #eeeeee80;
+  min-width: 600px;
+  overflow: auto;
 }
-input:focus {
-  outline: none;
-  border: 1px solid #cccccc;
+table th {
+  text-transform: uppercase;
+  background-color: var(--primary);
+  color: var(--white);
 }
-::placeholder {
-  color: #cccccc;
-  font-size: 14px;
+thead {
+  background-color: #d2e6e433;
 }
 
-select:focus,
-option:focus {
-  border: 1px solid #cccccc;
-  outline: none;
+th,
+td {
+  padding: 10px;
 }
-#terms {
-  margin-left: 10px;
-  width: 20px;
+tr td:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .button {
-  grid-area: 5/1/5/-1;
   margin-top: 20px;
   display: flex;
   width: 268px;
@@ -215,68 +224,6 @@ footer .copyright {
   align-items: center;
   flex-direction: column;
 }
-
-.overlay {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #373a36c9;
-  z-index: 9999;
-  display: none;
-}
-.terms {
-  position: absolute;
-  top: 5%;
-  left: 20%;
-  right: 20%;
-  height: 80vh;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-}
-.terms .terms-text {
-  overflow-y: scroll;
-  direction: ltr;
-  padding: 20px;
-}
-.terms h4 {
-  color: #022561;
-  font-family: 700;
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-.terms p {
-  color: #2c2d30;
-  font-family: 400;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.terms .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.terms .buttons button {
-  width: fit-content;
-  padding: 10px 20px;
-
-  border-radius: 8px;
-  border: none;
-  margin-left: 50px;
-  color: #e74c3c;
-  background-color: #e74c3c1a;
-}
-.terms .buttons button:first-of-type {
-  color: #ffffff;
-  background-color: #022561;
-}
 @media (max-width: 1100px) {
   .second h1 {
     font-size: 1.2rem;
@@ -285,44 +232,9 @@ footer .copyright {
     font-size: 18px;
   }
 }
-@media (max-width: 1000px) {
-  label {
-    font-size: 16px;
-  }
-}
-@media (max-width: 920px) {
-  .terms h4 {
-    font-size: 1.2rem;
-  }
-  .terms {
-    left: 10%;
-    right: 10%;
-  }
-}
-@media (max-width: 750px) {
-  .second h1 {
-    font-size: 0.8rem;
-  }
-  .second a {
-    font-size: 12px;
-  }
-}
-@media (max-width: 685px) {
-  .terms h4 {
-    font-size: 1rem;
-  }
-  .terms p {
-    font-size: 0.8rem;
-  }
+@media (max-width: 790px) {
   .direction p {
     font-size: 0.8rem;
-  }
-  .checkbox {
-    font-size: 14px;
-  }
-  .button,
-  form div:last-of-type {
-    grid-area: unset;
   }
 
   form {
@@ -334,9 +246,24 @@ footer .copyright {
     margin-right: auto;
     grid-template-columns: 1fr;
   }
-  form div {
-    flex-wrap: nowrap;
+  aside {
+    width: 10%;
+    min-width: fit-content;
   }
+
+  aside div p {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .second h1 {
+    font-size: 0.8rem;
+  }
+  .second a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 685px) {
   .info,
   .social {
     font-size: 10px;
@@ -353,15 +280,20 @@ footer .copyright {
   }
 }
 @media (max-width: 500px) {
+  .direction {
+    flex-wrap: wrap;
+  }
+  .direction img {
+    max-width: 70%;
+  }
   .direction p {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   .form h2 {
     font-size: 1rem;
   }
 }
-
-@media (max-width: 450px) {
+@media (max-width: 485px) {
   .second h1 {
     font-size: 0.6rem;
   }
@@ -371,10 +303,60 @@ footer .copyright {
   .copyright h2 {
     font-size: 1.2rem;
   }
-  .direction {
-    flex-wrap: wrap;
+  @media (max-width: 420px) {
+    form div {
+      flex-wrap: wrap;
+    }
+    .add-btn {
+      width: fit-content !important;
+      padding: 10px 50px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
   }
-  form div {
-    flex-wrap: wrap;
-  }
+}
+
+.choosed {
+  background: linear-gradient(91deg, #1c4185 68.23%, rgb(28 65 133 / 43%) 100%);
+  border-right: 5px solid white;
+}
+
+.sub {
+  margin-left: auto;
+  flex-direction: column;
+  padding: 0;
+  width: fit-content;
+}
+.sub div {
+  margin-bottom: 0;
+}
+.sub-nav {
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  width: fit-content;
+}
+.sub-nav p {
+  width: 100%;
+}
+.opened {
+  display: flex;
+}
+
+.add-btn {
+  margin-top: 20px;
+  display: flex;
+  width: 268px;
+  height: 45px;
+  margin-left: 5%;
+  margin-right: auto;
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #022561;
+  font-family: "cairo";
 }
