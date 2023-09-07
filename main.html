@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- leaflit css code for map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- main css code -->
+    <link rel="stylesheet" href="css/index.css" />
     <title>Home Page</title>
   </head>
   <body>
@@ -36,8 +43,7 @@
         </div>
       </div>
       <div class="second">
-        <h1>مركز كونا لتطوير القدرات الاعلاميه</h1>
-
+        <img src="imgs/logo.svg" alt="" />
         <a href="">الدورات التدريبيه</a>
         <a href="">عن المركز </a>
         <a href="">اتصل بنا </a>
@@ -63,7 +69,7 @@
       </div>
     </div>
     <div class="container">
-      <h2>برامج الموسم التدريبي 2023 2024 للأفراد فقط</h2>
+      <h2 class="home-header">برامج الموسم التدريبي 2023 2024 للأفراد فقط</h2>
       <div class="programs">
         <div class="program">
           <img src="imgs/course 3.svg" alt="" />
@@ -354,10 +360,10 @@
               >
               </textarea>
             </div>
-            <input class="button" type="submit" value="ارسال" />
+            <input class="contact-us-form-btn" type="submit" value="ارسال" />
           </form>
         </div>
-        <div class="map">
+        <div class="map-container">
           <div class="map-contacts">
             <div>
               <a href="tel:+22271800">22271800</a>
@@ -368,9 +374,8 @@
               <img src="imgs/New folder/mail.svg" alt="" />
             </div>
           </div>
-          <!-- <div class="img"> -->
-          <img class="mapImage" src="imgs/Rectangle 15.png" alt="" />
-          <!-- </div> -->
+
+          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -390,5 +395,12 @@
         </div>
       </div>
     </footer>
+    <!-- JavaScript Files For Map -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="javascript/main.js"></script>
   </body>
 </html>
