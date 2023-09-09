@@ -1013,31 +1013,20 @@ footer .copyright {
     display: block;
   }
   .nav-links {
-    position: fixed;
-    width: 90%;
-    top: 0;
-    right: 0;
-    background-color: red;
-    flex-direction: column;
-    z-index: 9999;
-    height: 100%;
-    align-items: flex-end;
-  }
-  .nav-links {
     visibility: hidden;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #022561e7;
+    background-color: #022561;
     flex-direction: column;
     z-index: 9999;
     height: 100%;
-    justify-content: space-between;
-    padding: 30px 20px 80px;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    padding: 20px;
+    align-items: flex-start;
   }
+
   .nav-mobile {
     display: flex;
     flex-direction: column;
@@ -1046,11 +1035,15 @@ footer .copyright {
   }
   .exit-btn {
     margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: auto;
   }
   .nav-links a {
-    font-size: 14px;
-    margin-left: auto;
+    font-size: 22px;
+    margin-right: 10px;
     color: white;
+    margin-bottom: 30px;
   }
 
   .footer-first h2 {
