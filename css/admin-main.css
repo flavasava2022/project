@@ -626,7 +626,7 @@ label {
   border: 1px solid #f1f0f0;
   border-radius: 16px;
   margin-bottom: 60px;
-  background-color: #ffffff !important;
+  background-color: #ffffff;
 }
 .table-holder h3 {
   padding: 2% 3%;
@@ -1042,14 +1042,22 @@ th {
   .traning-list-table td,
   .traning-list-table th {
     padding: 15px 5px;
-    font-size: 8px;
+    font-size: 6px;
   }
   .traning-list-table {
     margin-top: 10% !important;
-    margin-bottom: 31% !important;
+    margin-bottom: unset;
   }
   .traning-list-table img {
     width: 15px;
+  }
+  /* sign in page */
+  .sign-in-container {
+    margin: 10% 5%;
+  }
+
+  .sign-in-container {
+    width: 90%;
   }
 }
 /* End Responsive */
