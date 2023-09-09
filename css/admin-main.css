@@ -9,6 +9,12 @@ body {
   font-family: "Cairo", sans-serif;
   width: 100%;
 }
+input[type="date"] {
+  display: block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1.2em;
+}
 a {
   text-decoration: none;
   color: #ffffff;
