@@ -9,15 +9,10 @@ body {
   font-family: "Cairo", sans-serif;
   width: 100%;
 }
-input {
-  display: block;
-  -webkit-appearance: textfield !important;
-  -moz-appearance: textfield !important;
-  min-width: 96%;
-}
-input::-webkit-datetime-edit {
-  display: block;
-  padding: 0;
+input[type="date"],
+input[type="time"] {
+  -webkit-appearance: none;
+  -webkit-min-logical-width: calc(100%);
 }
 a {
   text-decoration: none;
