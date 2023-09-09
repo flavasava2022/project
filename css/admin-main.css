@@ -9,11 +9,14 @@ body {
   font-family: "Cairo", sans-serif;
   width: 100%;
 }
-input[type="date"] {
+input {
   display: block;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  min-height: 1.2em;
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+}
+input::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
 }
 a {
   text-decoration: none;
