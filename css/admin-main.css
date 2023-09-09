@@ -626,7 +626,7 @@ label {
   border: 1px solid #f1f0f0;
   border-radius: 16px;
   margin-bottom: 60px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 .table-holder h3 {
   padding: 2% 3%;
