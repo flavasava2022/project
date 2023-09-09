@@ -9,20 +9,16 @@ body {
   font-family: "Cairo", sans-serif;
   width: 100%;
 }
-input[type="date"]
-{
-    display:block;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    min-height: 1.2em;
+input {
+  display: block;
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  min-width: 96%;
 }
 input::-webkit-datetime-edit {
   display: block;
   padding: 0;
 }
-input:after { color: #000; content: attr(placeholder) !important; font-size: 14px }
-
-input[value]:not([value=“”]) + input:after { content: ‘’ !important; }
 a {
   text-decoration: none;
   color: #ffffff;
@@ -301,6 +297,7 @@ footer .copyright {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 30%));
+  grid-gap: 28px;
   width: 90%;
   margin-left: auto;
   align-items: center;
