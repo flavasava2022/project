@@ -297,7 +297,7 @@ footer .copyright {
   width: 90%;
   margin-left: auto;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 28px 0px;
   margin-right: auto;
 }
