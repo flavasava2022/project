@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/home-admin.css" />
+
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
-    <title>التسجيل</title>
+    <!-- BootStrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/admin-main.css" />
+    <title>Main Admin</title>
   </head>
   <body>
     <nav id="nav">
@@ -35,16 +43,16 @@
           /></a>
         </div>
       </div>
-      <div class="second">
-        <h1>مركز كونا لتطوير القدرات الاعلاميه</h1>
-
-        <a href="">الدورات التدريبيه</a>
-        <a href="">عن المركز </a>
-        <a href="">اتصل بنا </a>
-      </div>
     </nav>
     <main>
       <aside>
+        <div class="right-arrow-nav">
+          <img src="imgs/nav-arrow.svg" alt="" />
+        </div>
+        <div class="logo">
+          <img src="imgs/logo.svg" alt="" />
+        </div>
+
         <div class="choice choosed">
           <img src="imgs/Union.svg" alt="" />
           <p>الرئيسيه</p>
@@ -56,7 +64,7 @@
         </div>
 
         <div class="choice sub">
-          <div>
+          <div class="main-con">
             <img src="imgs/sales.svg" alt="" />
             <p>اداره التدريبات</p>
             <img class="arrow-down" src="imgs/Vector 9.svg" alt="" />
@@ -73,104 +81,102 @@
         </div>
       </aside>
       <div class="container">
+        <img class="nav-arrow" src="imgs/nav-arrow.svg" alt="" />
         <div class="direction">
           <p>الرئيسيه</p>
-
         </div>
         <div class="navigation">
           <div class="boxes-holder">
             <h3>نموذج لوريم ايبسوم عربي</h3>
             <div class="boxes">
-            <div class="box">
-              <div class="f-img">
-                <img src="imgs/Disc Icon.svg" alt="">
+              <div class="box">
+                <div class="f-img">
+                  <img src="imgs/Disc Icon.svg" alt="" />
+                </div>
+                <span>8</span>
+                <p>عدد الدورات</p>
               </div>
-              <span>8</span>
-              <p>عدد الدورات</p>
-
-            </div>
-            <div  class="box">
-              <div class="s-img">
-                <img src="imgs/New Costumers Icon.svg" alt="">
+              <div class="box">
+                <div class="s-img">
+                  <img src="imgs/New Costumers Icon.svg" alt="" />
+                </div>
+                <span>5</span>
+                <p>عدد المتدربين</p>
               </div>
-              <span>5</span>
-              <p>عدد المتدربين</p>
-
-            </div>
-            <div  class="box">
-              <div class="img">
-                <img src="imgs/dollar.svg" alt="">
+              <div class="box">
+                <div class="img">
+                  <img src="imgs/dollar.svg" alt="" />
+                </div>
+                <span>300 SAR</span>
+                <p>اجمالي المبالغ</p>
               </div>
-              <span>300 SAR</span>
-              <p>اجمالي المبالغ</p>
-            </div>
-            <div class="box">
-              <div class="img">
-                <img src="imgs/Icon (1).svg" alt="">
+              <div class="box">
+                <div class="img">
+                  <img src="imgs/Icon (1).svg" alt="" />
+                </div>
+                <span>$1k</span>
+                <p>متوسط الحضور</p>
               </div>
-              <span>$1k</span>
-              <p>متوسط الحضور</p>
             </div>
-          </div>
           </div>
         </div>
         <div class="table-holder">
           <h3>اخر التدريبات</h3>
-          <div class="table">
-          <table>
-            <thead>
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead class="table-primary">
                 <tr>
-                    <th>اسم الدوره</th>
-                    <th>بدايه الدوره</th>
-                    <th>نهايه الدوره</th>
-                    <th>سعر الدوره</th>
-                  </tr>
-            </thead>
+                  <th scope="col" class="text-center">اسم الدوره</th>
+                  <th scope="col" class="text-center">بدايه الدوره</th>
+                  <th scope="col" class="text-center">نهايه الدوره</th>
+                  <th scope="col" class="text-center">سعر الدوره</th>
+                </tr>
+              </thead>
 
               <tr>
-                <td>صحافة الذكاء الاصطناعي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-
+                <td class="text-center">صحافة الذكاء الاصطناعي</td>
+                <td class="text-center">24/8/2023</td>
+                <td class="text-center">30/8/2023</td>
+                <td class="text-center">150 SAR</td>
               </tr>
               <tr>
-                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-
+                <td class="text-center">
+                  صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي
+                </td>
+                <td class="text-center">24/8/2023</td>
+                <td class="text-center">30/8/2023</td>
+                <td class="text-center">150 SAR</td>
               </tr>
               <tr>
-                <td>صحافة الذكاء الاصطناعي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-
+                <td class="text-center">صحافة الذكاء الاصطناعي</td>
+                <td class="text-center">24/8/2023</td>
+                <td class="text-center">30/8/2023</td>
+                <td class="text-center">150 SAR</td>
               </tr>
               <tr>
-                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-
+                <td class="text-center">
+                  صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي
+                </td>
+                <td class="text-center">24/8/2023</td>
+                <td class="text-center">30/8/2023</td>
+                <td class="text-center">150 SAR</td>
               </tr>
               <tr>
-                <td>صحافة الذكاء الاصطناعي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-
+                <td class="text-center">صحافة الذكاء الاصطناعي</td>
+                <td class="text-center">24/8/2023</td>
+                <td class="text-center">30/8/2023</td>
+                <td class="text-center">150 SAR</td>
               </tr>
               <tr>
-                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-
+                <td class="text-center">
+                  صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي
+                </td>
+                <td class="text-center">24/8/2023</td>
+                <td class="text-center">30/8/2023</td>
+                <td class="text-center">150 SAR</td>
               </tr>
-
-          </table>
+            </table>
+          </div>
         </div>
       </div>
     </main>
@@ -190,6 +196,11 @@
         </div>
       </div>
     </footer>
-<script src="javascript-admin.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript-admin.js"></script>
   </body>
 </html>

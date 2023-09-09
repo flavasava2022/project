@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/traning-list.css" />
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- BootStrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/admin-main.css" />
     <title>التسجيل</title>
   </head>
   <body>
@@ -35,16 +42,16 @@
           /></a>
         </div>
       </div>
-      <div class="second">
-        <h1>مركز كونا لتطوير القدرات الاعلاميه</h1>
-
-        <a href="">الدورات التدريبيه</a>
-        <a href="">عن المركز </a>
-        <a href="">اتصل بنا </a>
-      </div>
     </nav>
     <main>
       <aside>
+        <div class="right-arrow-nav">
+          <img src="imgs/nav-arrow.svg" alt="" />
+        </div>
+        <div class="logo">
+          <img src="imgs/logo.svg" alt="" />
+        </div>
+
         <div class="choice choosed">
           <img src="imgs/Union.svg" alt="" />
           <p>الرئيسيه</p>
@@ -56,7 +63,7 @@
         </div>
 
         <div class="choice sub">
-          <div>
+          <div class="main-con">
             <img src="imgs/sales.svg" alt="" />
             <p>اداره التدريبات</p>
             <img class="arrow-down" src="imgs/Vector 9.svg" alt="" />
@@ -72,7 +79,8 @@
           <p>التقارير</p>
         </div>
       </aside>
-      <div class="container">
+      <div class="traning-list-container">
+        <img class="nav-arrow" src="imgs/nav-arrow.svg" alt="" />
         <div class="direction">
           <p>الرئيسيه</p>
           <img src="imgs/arrow-left.svg" alt="" />
@@ -81,84 +89,92 @@
           <p>قائمه التدريبات</p>
         </div>
         <button class="add-btn">اضافه تدريب</button>
-        <div class="table-holder">
-          <div class="table">
-          <table>
-            <thead>
+        <div class="table-holder traning-list-table">
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead>
                 <tr>
-                    <th>اسم الدوره</th>
-                    <th>بدايه الدوره</th>
-                    <th>نهايه الدوره</th>
-                    <th>سعر الدوره</th>
-                    <th>الاختيارات</th>
-                  </tr>
-            </thead>
-            <tbody id="tbody">
-              <tr>
-                <td>صحافة الذكاء الاصطناعي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-                <td>
-                  <img src="imgs/eye.svg" alt="" />
-                  <img src="imgs/edit.svg" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-                <td>
-                  <img src="imgs/eye.svg" alt="" />
-                  <img src="imgs/edit.svg" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td>صحافة الذكاء الاصطناعي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-                <td>
-                  <img src="imgs/eye.svg" alt="" />
-                  <img src="imgs/edit.svg" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-                <td>
-                  <img src="imgs/eye.svg" alt="" />
-                  <img src="imgs/edit.svg" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td>صحافة الذكاء الاصطناعي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-                <td>
-                  <img src="imgs/eye.svg" alt="" />
-                  <img src="imgs/edit.svg" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td>صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي</td>
-                <td>24/8/2023</td>
-                <td>30/8/2023</td>
-                <td>150 SAR</td>
-                <td>
-                  <img src="imgs/eye.svg" alt="" />
-                  <img src="imgs/edit.svg" alt="" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  <th scope="col" class="text-center">اسم الدوره</th>
+                  <th scope="col" class="text-center">بدايه الدوره</th>
+                  <th scope="col" class="text-center">نهايه الدوره</th>
+                  <th scope="col" class="text-center">سعر الدوره</th>
+                  <th scope="col" class="text-center">الاختيارات</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <tr>
+                  <td class="text-center">صحافة الذكاء الاصطناعي</td>
+                  <td class="text-center">24/8/2023</td>
+                  <td class="text-center">30/8/2023</td>
+                  <td class="text-center">150 SAR</td>
+                  <td class="text-center">
+                    <img src="imgs/eye.svg" alt="" />
+                    <img src="imgs/edit.svg" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي
+                  </td>
+                  <td class="text-center">24/8/2023</td>
+                  <td class="text-center">30/8/2023</td>
+                  <td class="text-center">150 SAR</td>
+                  <td class="text-center">
+                    <img src="imgs/eye.svg" alt="" />
+                    <img src="imgs/edit.svg" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">صحافة الذكاء الاصطناعي</td>
+                  <td class="text-center">24/8/2023</td>
+                  <td class="text-center">30/8/2023</td>
+                  <td class="text-center">150 SAR</td>
+                  <td class="text-center">
+                    <img src="imgs/eye.svg" alt="" />
+                    <img src="imgs/edit.svg" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي
+                  </td>
+                  <td class="text-center">24/8/2023</td>
+                  <td class="text-center">30/8/2023</td>
+                  <td class="text-center">150 SAR</td>
+                  <td class="text-center">
+                    <img src="imgs/eye.svg" alt="" />
+                    <img src="imgs/edit.svg" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">صحافة الذكاء الاصطناعي</td>
+                  <td class="text-center">24/8/2023</td>
+                  <td class="text-center">30/8/2023</td>
+                  <td class="text-center">150 SAR</td>
+                  <td class="text-center">
+                    <img src="imgs/eye.svg" alt="" />
+                    <img src="imgs/edit.svg" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    صحافة الذكاء الاصطناعي وصناعةالمحتوى الآلي
+                  </td>
+                  <td class="text-center">24/8/2023</td>
+                  <td class="text-center">30/8/2023</td>
+                  <td class="text-center">150 SAR</td>
+                  <td class="text-center">
+                    <img src="imgs/eye.svg" alt="" />
+                    <img src="imgs/edit.svg" alt="" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </main>
+
     <footer>
       <div class="footer-holder">
         <div class="footer-first">
@@ -175,6 +191,11 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
     <script src="javascript-admin.js"></script>
   </body>
 </html>

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/admin-courses.css" />
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/admin-main.css" />
     <title>قائمه التدريبات</title>
   </head>
   <body>
@@ -35,16 +35,16 @@
           /></a>
         </div>
       </div>
-      <div class="second">
-        <h1>مركز كونا لتطوير القدرات الاعلاميه</h1>
-
-        <a href="">الدورات التدريبيه</a>
-        <a href="">عن المركز </a>
-        <a href="">اتصل بنا </a>
-      </div>
     </nav>
     <main>
       <aside>
+        <div class="right-arrow-nav">
+          <img src="imgs/nav-arrow.svg" alt="" />
+        </div>
+        <div class="logo">
+          <img src="imgs/logo.svg" alt="" />
+        </div>
+
         <div class="choice choosed">
           <img src="imgs/Union.svg" alt="" />
           <p>الرئيسيه</p>
@@ -55,8 +55,8 @@
           <p>اداره المستخدمين</p>
         </div>
 
-        <div class="sub choice">
-          <div>
+        <div class="choice sub">
+          <div class="main-con">
             <img src="imgs/sales.svg" alt="" />
             <p>اداره التدريبات</p>
             <img class="arrow-down" src="imgs/Vector 9.svg" alt="" />
@@ -72,7 +72,8 @@
           <p>التقارير</p>
         </div>
       </aside>
-      <div class="container">
+      <div class="admin-courses-container">
+        <img class="nav-arrow" src="imgs/nav-arrow.svg" alt="" />
         <div class="direction">
           <p>الرئيسيه</p>
           <img src="imgs/arrow-left.svg" alt="" />
@@ -86,7 +87,7 @@
         <div class="course">
           <!-- <img class="main-img" src="imgs/course-img.png" alt="" /> -->
           <img
-            class="main-img"
+            class="main-img-admin-courses"
             src="imgs/course-img.png"
             alt="Elva dressed as a fairy"
           />
