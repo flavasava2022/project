@@ -612,7 +612,8 @@ footer .copyright {
 
 .overlay {
   top: 0;
-  position: absolute;
+  left: 0;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: #373a36c9;
