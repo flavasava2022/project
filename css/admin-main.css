@@ -13,6 +13,7 @@ input {
   display: block;
   -webkit-appearance: textfield !important;
   -moz-appearance: textfield !important;
+  min-width: 96%;
 }
 input::-webkit-datetime-edit {
   display: block;
