@@ -1,18 +1,20 @@
-// popUp Signup Java
-const popUp = document.querySelector(".overlay");
-const checkBox = document.getElementById("terms");
+// Homepage Map java
+if (document.querySelector("#map")) {
+  const map = L.map("map").setView([29.3440892486483, 47.949007143370196], 13);
 
-checkBox.addEventListener("change", (e) => {
-  if (checkBox.checked) {
-    popUp.style.display = "block";
-    document.body.style.overflow = "hidden";
-    let hieght = window.scrollY;
+  L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+    maxZoom: 20,
+    subdomains: ["mt0", "mt1", "mt2", "mt3"],
+  }).addTo(map);
 
-    document.querySelector(".overlay").style.top = `${hieght}px`;
-  }
+  L.marker([29.3440892486483, 47.949007143370196])
+    .addTo(map)
+    .bindPopup("مركز كونا لتطوير القدرات الإعلامية")
+    .openPopup();
+}
+document.querySelector(".burger-btn").addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.add("open");
 });
-
-document.querySelector(".hide").addEventListener("click", (e) => {
-  popUp.style.display = "none";
-  document.body.style.overflow = "unset";
+document.querySelector(".exit-btn").addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.remove("open");
 });
