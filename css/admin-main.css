@@ -307,7 +307,6 @@ footer .copyright {
 .traning-modification-form .fields div {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 5px;
 }
 
 .traning-modification-form .fields div label {
