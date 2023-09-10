@@ -291,7 +291,7 @@ footer .copyright {
 .fields {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 32%));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 29%));
   width: 90%;
   margin-left: auto;
   align-items: center;
