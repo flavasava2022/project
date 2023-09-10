@@ -292,13 +292,11 @@ footer .copyright {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 28%));
-  grid-gap: 10px;
-
   width: 90%;
   margin-left: auto;
   align-items: center;
   justify-content: space-evenly;
-  gap: 28px 0px;
+  gap: 15px 10px;
   margin-right: auto;
 }
 .fields::after {
@@ -307,7 +305,6 @@ footer .copyright {
 .traning-modification-form .fields div {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
 }
 
 .traning-modification-form .fields div label {
