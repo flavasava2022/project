@@ -296,7 +296,7 @@ footer .copyright {
   margin-left: auto;
   align-items: center;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: 15px;
   margin-right: auto;
 }
 .fields::after {
