@@ -76,6 +76,53 @@ textarea:focus {
 .aside-display {
   display: flex;
 }
+
+/* table bootstrap */
+div.table-responsive > div.dataTables_wrapper > div.row {
+  margin: 0;
+  direction: initial;
+}
+div.table-responsive
+  > div.dataTables_wrapper
+  > div.row
+  > div[class^="col-"]:last-child {
+  padding-right: 0;
+  direction: ltr;
+}
+div.dataTables_wrapper div.dataTables_filter label {
+  text-align: right;
+  direction: initial;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+  padding: 5px;
+  border-radius: 8px;
+  margin-right: 10px;
+  width: 200px;
+}
+div.table-responsive
+  > div.dataTables_wrapper
+  > div.row
+  > div[class^="col-"]:last-child {
+  direction: ltr;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin: 10px;
+  white-space: nowrap;
+  justify-content: flex-end;
+  direction: initial;
+}
+.form-control:focus {
+  border-color: #cccccc;
+
+  box-shadow: none;
+}
+.active > .page-link,
+.page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: #cfe2ff;
+  border-color: #cccccc;
+}
 /* General Css Code */
 
 /* Main Navigation */
@@ -254,7 +301,7 @@ footer .copyright {
   padding: 10px 20px 10px 0;
   margin-bottom: 20px;
   background-color: #d2e6e433;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 
 .direction span {
@@ -635,6 +682,7 @@ label {
   border-radius: 16px;
   margin-bottom: 60px;
   background-color: #ffffff;
+  padding: 1% 0;
 }
 .table-holder h3 {
   padding: 2% 3%;
